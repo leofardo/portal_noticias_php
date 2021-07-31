@@ -16,10 +16,11 @@ poderá rebaixá-lo para usuário normal.
 Você sendo administrador poderá adicionar, remover ou editar quantas notícias quiser mas se você é somente membro vc só poderá vê-las
 
 ## Qual o objetivo desse projeto?
-O objetivo desse projeto foi para testar meus conhecimentos em PHP, MySQL e o padrão de arquitetura MVC.
-Também foi um objetivo bloquear o acesso aos usuários normais de poder criar noticias, dando permissão somente aos administradores.
+O objetivo desse projeto foi para testar meus conhecimentos em PHP, MySQL e o padrão de arquitetura MVC, mexer com rotas do site e
+também foi um objetivo bloquear o acesso aos usuários normais de poder criar noticias, dando permissão somente aos administradores.
 
 ## Alertas importantes
+- Não utilize XAMPP (poderá usar somente o MySQL do xampp) pois meu projeto não funcionará porque esse código manipula as rotas do projeto, que gera uma confusão com o XAMPP, crie um servidor http embutido no php através do cmd.
 - Para você poder postar notícias é de suma importancia vc adicionar a conta que deixei no arquivo sql.sql, somente administradores conseguem adicionar noticias.
 - Não foquei no front-end, a interface que está lá é só para "encher linguiça", o foco do projeto é o sistema de login, registro e as notícias.
 - A senha fica criptografada no banco de dados então não esqueça os dados da sua conta. 
