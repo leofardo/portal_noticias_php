@@ -16,4 +16,4 @@ CREATE TABLE tb_contas(
 
 
 -- Use esse comando para adicionar um administrador para poder adicionar notícias.
-INSERT INTO tb_contas (nome, email, senha, funcao) VALUES" . "('admin', 'admin@admin.com', '123', 1); 
+INSERT INTO tb_contas (nome, email, senha, funcao) VALUES ('admin', 'admin@admin.com', '123', 1); 
