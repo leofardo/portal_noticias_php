@@ -1,0 +1,45 @@
+<div id="contas">
+
+	<?php for($i=0; $i < count($this->view->contas) ; $i++){ ?>
+
+		<article class="usuario">
+			<h2 class="nome-user"><?=$this->view->contas[$i]['nome']?></h2>
+			<h4 class="funcao-user"><?=$this->view->contas[$i]['funcao']?></h4>
+
+			<?php if($_SESSION && $_SESSION['conta'] !== '' && $_SESSION['conta']['funcao'] == 1){ ?>
+
+				<div id="options">
+					<ul>
+
+						<?php if($this->view->contas[$i]['funcao'] == 'Administrador' ){ ?>
+							<?php if(!($this->view->contas[$i]['id'] ==  $_SESSION['conta']['id'])){ ?>
+								<li>
+									<a href="/upgrade?id=<?=$this->view->contas[$i]['id']?>">
+										Rebaixar para Membro
+									</a>
+								</li>
+							<?php }else{ ?>
+								<li>
+									<a href="#" disabled >Você</a>
+								</li>
+							<?php } ?>	
+
+						<?php }else if($this->view->contas[$i]['funcao'] == 'Membro' ){?>	
+
+							<li>
+								<a href="/upgrade?id=<?=$this->view->contas[$i]['id']?>">
+									Promover para Administador
+								</a>
+							</li>
+
+						<?php }?>
+					</ul>
+				</div>
+
+			<?php }?>
+
+		</article>
+
+	<?php }?>	
+
+</div>

@@ -1,0 +1,55 @@
+<?php 
+
+	session_start();
+
+?>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://kit.fontawesome.com/5f484ee32b.js" crossorigin="anonymous"></script>
+	<title>Portal Noticias</title>
+</head>
+<body>
+	<header>
+		<div id="titulo">
+			<span>Portal Noticias</span>
+			<!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"> -->
+
+		</div>
+
+
+		<nav>
+
+			<?php if($_SESSION && $_SESSION['conta'] !== ''){?>
+				<span class="nome"><?=  $_SESSION['conta']['nome']  ?></span>
+			<?php }?>
+			<ul>
+
+				<?php if($_SESSION && $_SESSION['conta'] !== ''){?>
+					<li><a href="/logoff">Deslogar</a></li>
+
+					<?php if($_SESSION['conta']['funcao'] == 1){?>
+						<li><a href="/">Home</a></li>
+						<li><a href="/contas">Contas Registradas</a></li>
+					<?php }?>	
+
+				<?php }?>
+			</ul>
+		</nav>
+	</header>
+
+
+
+
+
+	<?php
+
+		$this->content(); 
+
+	?>
+
+</body>
+</html>

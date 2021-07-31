@@ -1,0 +1,197 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+	display: flex;
+	padding: 10px;
+	background: black;
+	margin-bottom: 25px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header img{
+	width: 100px;
+	height: 50px;
+	margin-left: 10px; 
+}
+
+#titulo{
+	font-size: 2em;
+	margin-left: 10px;
+	display: flex;
+	align-items: center;
+	color: #eaeaea;
+}
+
+#noticias, #contas{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.artigo{
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	height: 200px;
+	border: 2px solid black;
+	border-radius: 3px;
+	margin: 10px;
+}
+
+.artigo h1{
+	background: black;
+	padding: 5px;
+	color: #eaeaea;
+}
+
+.artigo p{
+	color: black;
+	padding: 5px;
+	height: 75%;
+}
+
+nav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+nav .nome{
+	padding: 5px;
+	background: white;
+	margin-right: 10px;
+}
+
+nav ul{
+	list-style: none;
+	display: flex;
+}
+
+nav li{
+	background: #efefef;
+	border-radius: 3px;
+	margin: 0px 5px;
+}
+
+nav li a{
+	display: block;
+	padding: 10px 20px;
+	color: black;
+	text-decoration: none;
+}
+
+#create, #alter, #login {
+	display: flex;
+	justify-content: center;
+}
+
+#create form,
+#alter form,
+#login form
+{
+	display: flex;
+	flex-direction: column;
+	background: black;
+	padding: 20px 12px;
+	border-radius: 10px;
+}
+
+#create input[type=text],
+#alter input[type=text],
+#login input{
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 1.3em;
+
+}
+
+#create textarea,
+#alter textarea{
+	resize: none;
+	width: 300px;
+	height: 200px;
+	margin-bottom: 15px;
+	font-size: 1.2em;
+
+
+}
+
+#create input[type=submit],
+#alter input[type=submit]{
+	padding: 10px;
+}
+
+#options ul{
+	list-style: none;
+	padding: 5px 10px;
+	display: flex;
+	justify-content: flex-end;
+	background: black;
+}
+
+#options li{
+
+}
+
+#options li a{
+	text-decoration: none;
+	color: white;
+}
+
+#contas #options ul{
+	padding: 16px 0;
+	justify-content: center;
+	align-items: center;
+}
+
+#contas #options li a{
+	background: white;
+	padding: 6px 10px;
+	text-decoration: none;
+	color: black;
+	border-radius: 3px;
+}
+
+.usuario{
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	min-height: 70px;
+	border: 2px solid black;
+	border-radius: 3px;
+	margin: 10px;
+}
+
+.usuario .nome-user{
+	background: black;
+	color: white;
+	text-align: center;
+	padding: 5px 0px;
+	font-size: 1.2em;
+}
+
+.usuario .funcao-user{
+	font-weight: 500;
+	text-align: center;
+	padding: 6px 10px;
+}
+
+
+@media only screen and (max-width: 768px){
+	header{
+		flex-direction: column;
+	}
+
+	#titulo{
+		margin-left: 0;
+		font-size: 2.6em;
+		margin-bottom: 10px;
+	}
+}
+
+

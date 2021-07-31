@@ -1,0 +1,36 @@
+<div id="noticias">
+	<?php for ($i=0; $i < count($this->view->noticias) ; $i++) { ?>
+
+		<article class='artigo'>
+			<h1>
+				<?=$this->view->noticias[$i]['titulo']?>
+			</h1>
+			<p>
+				<?=$this->view->noticias[$i]['noticia']?>
+			</p>
+
+
+			<?php if($_SESSION && $_SESSION['conta'] !== '' && $_SESSION['conta']['funcao'] == 1){ ?>
+
+				<div id="options">
+					<ul>
+						<li>
+							<a href="/delete?id=<?= $this->view->noticias[$i]['id'] ?>">
+								<i class="fas fa-trash-alt"></i>
+							</a>
+
+							<a href="/alter?id=<?= $this->view->noticias[$i]['id'] ?>">
+								<i class="far fa-edit"></i>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+
+			<?php }?>	
+
+		</article>
+
+	<?php } ?> 
+
+</div>
